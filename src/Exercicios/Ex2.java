@@ -1,5 +1,9 @@
 package Exercicios;
 
+/*2- Escreva um sistema estruturado que gere os números de 1000 a
+1999 e escreva
+somente os números que são divisíveis por 11 e cujo resto é 5.*/
+
 public class Ex2 {
 	public static void main(String args[]) {
 		
