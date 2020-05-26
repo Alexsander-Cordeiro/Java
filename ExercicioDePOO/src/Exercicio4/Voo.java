@@ -62,19 +62,16 @@ public class Voo {
 	//Método de controlar o numero de passageiros
 	
 	public void controlePassageiros() {
-		if(getNumPassageiros() >= 50) {
-			System.out.println("Avião ja esta lotado!!");
-						
-		}else {
-			System.out.println("Ainda tem assentos disponiveis");
+		if(getNumPassageiros() < 50) {
+			numPassageiros += getNumPassageiros();
+			System.out.println(numPassageiros);						
 		}
 	}
 	
 	public void vooCompletos() {
-		int vooCompleto = 0;
 		if(getNumPassageiros() >= 50) {
-			vooCompleto++;
-			System.out.println("Os Voos lotados são: "+ vooCompleto);
+			numVoo++;
+			System.out.println("Os Voos lotados são: "+ numVoo);
 		}
 	}
 	

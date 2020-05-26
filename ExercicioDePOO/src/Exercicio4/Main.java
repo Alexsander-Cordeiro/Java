@@ -30,6 +30,7 @@ public class Main {
 	 	meuVoo.setNumVoo(numVoo);
 	 	
 	 	System.out.println("Data: " + formato.format(data));
+	
 
 	 	
 	 	System.out.println("Informe o horário: " );
@@ -40,13 +41,17 @@ public class Main {
 	 	numPassageiros = sc.nextInt();
 	 	meuVoo.setNumPassageiros(numPassageiros);
 	 	
-	 	meuVoo.controlePassageiros();
-	 	
+	 
 	
-	 	meuVoo.vooCompletos();
 		 	
 	 	}
+	
+		meuVoo.controlePassageiros();
+		
+	 	meuVoo.vooCompletos();
+	 	
 	 	sc.close();
+	 	scTexto.close();
 	 		 	
 	
 	 	

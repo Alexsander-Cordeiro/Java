@@ -20,6 +20,8 @@ public class Ex4 {
 	public static void main(String args[]) {
 		
 		Scanner sc = new Scanner(System.in);
+		Scanner scNome = new Scanner(System.in);
+		
 		
 		 float media = 0,nota1,nota2;
 		 String nome;
@@ -30,26 +32,26 @@ public class Ex4 {
 				
 		 
 		 System.out.printf("Entre com o nome do aluno: ");
-		 nome = sc.next();
+		 nome = scNome.next();
 		 
 		
-		 System.out.println("Entre com a nota A: ");
+		 System.out.print("Entre com a nota A: ");
 		 nota1 = sc.nextFloat();
 		 
 		 if(nota1 > 10 || nota1 < 0) {
 			 System.out.println("Nota Inválida");
 			 
 			 do {
-				 System.out.println("Entre com a nota A novamente: ");
+				 System.out.print("Entre com a nota A novamente: ");
 				 nota1 = sc.nextFloat();
-			 }while(nota1 > 10);
+			 }while(nota1 > 10 || nota1 <0);
 		 }
 		 
-			 System.out.println("Entre com a nota B: ");
+			 System.out.print("Entre com a nota B: ");
 			 nota2 = sc.nextFloat();
 			 
 			 if(nota2 > 10 || nota2 < 0) {
-				 System.out.println("Nota Inválida");
+				 System.out.print("Nota Inválida");
 				 
 				 do {
 					 System.out.println("Entre com a nota B novamente: ");
@@ -57,12 +59,14 @@ public class Ex4 {
 				 }while(nota2 > 10);
 			 }
 			 
-			 	media = (nota1 + nota2) /2;
+			 	media = (nota1 + nota2*2) /3;
 			 	System.out.println("O aluno " + nome + " tem a média " + media);
 			 	i++;
+			 	System.out.println();
 		 
 		 }
 			sc.close();
+			scNome.close();
 		 
 	}
 	

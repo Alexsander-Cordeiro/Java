@@ -7,11 +7,9 @@ somente os números que são divisíveis por 11 e cujo resto é 5.*/
 public class Ex2 {
 	public static void main(String args[]) {
 		
-		int resultado = 0;
-		
+				
 		for(int i=1000;i<=1999;i++) {
-			if(i%11 == 0 || i%2 == 5) {
-				resultado = resultado + i;
+			if(i%11 == 0 || i%11 == 5) {
 				System.out.println(i);
 			}
 			
