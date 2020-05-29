@@ -10,7 +10,7 @@ Método para imprimir o saldo atual.
 
 public class ContaCorrente {
 	
-	private int numAgencia;
+	private String numAgencia;
 	private int numConta;
 	private float saldoConta;
 	private String operacao;
@@ -18,7 +18,7 @@ public class ContaCorrente {
 	
 	//Construtor
 	
-	public ContaCorrente(int numAgencia,int numConta,
+	public ContaCorrente(String numAgencia,int numConta,
 			float saldoConta,String operacao,float valor) {
 		
 		this.numAgencia = numAgencia;
@@ -28,11 +28,11 @@ public class ContaCorrente {
 		this.valor = valor;
 	}
 
-	public int getNumAgencia() {
+	public String getNumAgencia() {
 		return numAgencia;
 	}
 
-	public void setNumAgencia(int numAgencia) {
+	public void setNumAgencia(String numAgencia) {
 		this.numAgencia = numAgencia;
 	}
 
@@ -76,8 +76,14 @@ public class ContaCorrente {
 	
 	//Método para saque
 	public void saque() {
-		saldoConta = getSaldoConta() - getValor();
-		System.out.println("Saldo atual é: " + getSaldoConta());
+		
+		if(this.saldoConta >= this.valor) {
+			this.saldoConta = getSaldoConta() - getValor();
+			System.out.println("Saldo atual é: " + getSaldoConta());
+		}else {
+			System.out.println("Saldo insuficiente para saque!!");
+		}
+	
 	}
 	
 	//Método para imprimir saldo atual
